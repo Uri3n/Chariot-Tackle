@@ -53,14 +53,13 @@ Here's an example of me allocating some virtual memory with **NtAllocateVirtualM
 
 
 Once you're done using Chariot Tackle, make sure you call the **ctCleanup** function. This will free
-any memory that Chariot Tackle was using. The reason for this kind of implementation is that
-C++ deconstructors utilize parts of the CRT library.
+any memory that Chariot Tackle was using.
 
 ![ctExample8](https://github.com/Uri3n/Chariot-Tackle/assets/153572153/8940fe58-b938-4307-bcf6-e2c910c39518)
 
 
 ## IMPORTANT STUFF!!
-1. I wrote this shit in like, a day. It does not handle undefined or unexpected behavior, and can be dangerous to use.
+1. I wrote this in like, a day. It does not handle undefined or unexpected behavior, and can be dangerous to use.
 2. Your program WILL crash if NTDLL is not loaded into the process' address space at the time that **CT_INIT** is called.
    Please ensure NTDLL is loaded first by calling LoadLibraryA/W.
    ![ctExample6](https://github.com/Uri3n/Chariot-Tackle/assets/153572153/0e257cf0-07a7-4337-9cde-0dcd0af4821b)
